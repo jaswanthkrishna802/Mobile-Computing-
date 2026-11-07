@@ -1,0 +1,4 @@
+workload,single_ms,multi_ms,single_threads,multi_threads,interpretation
+large_parse,180.0,92.0,1,4,Parallel chunks outweigh coordination cost in this model.
+tiny_task,1.2,3.8,1,4,Scheduling and synchronisation overhead dominate.
+contended_counter,42.0,67.0,1,4,Lock contention serialises the critical section.

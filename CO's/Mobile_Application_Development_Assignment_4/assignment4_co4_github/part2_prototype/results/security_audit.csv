@@ -1,0 +1,7 @@
+asset,vector,control,status,reason
+Auth token,Other app reads shared file,UID sandbox + Keystore-backed encryption,PARTIALLY_BLOCKED,Sandbox blocks ordinary apps; rooted/compromised OS remains residual risk.
+Patient database,Device theft / filesystem extraction,Encrypted database with hardware-backed key,PARTIALLY_BLOCKED,At-rest protection depends on key access policy and device lock state.
+API traffic,Network interception,TLS with certificate validation,BLOCKED,Assuming correct hostname validation and no user-installed interception CA.
+Exported component,Malicious app sends crafted intent,Non-exported component + input validation,BLOCKED,Public entry points still require authentication and validation.
+Update package,Tampered update,Package signature verification,BLOCKED,Signing-key compromise or supply-chain compromise remains residual risk.
+Location permission,Over-collection / user surprise,Runtime permission + purpose limitation,PARTIALLY_BLOCKED,Permission grant does not prevent misuse after access is granted.

@@ -1,0 +1,5 @@
+case,compile_mode,startup_ms,steady_ops_per_s,heap_mb,gc_pause_ms
+cold_start,verify,780,1000,46,18
+warm_start,verify,260,1000,47,8
+profile_guided,speed-profile,420,1850,49,9
+full_aot,speed,510,2100,52,9

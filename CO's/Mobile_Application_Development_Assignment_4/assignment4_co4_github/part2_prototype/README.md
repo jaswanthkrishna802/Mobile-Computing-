@@ -1,0 +1,1 @@
+Run `python src/run_all.py` from repository root. Outputs are synthetic logic-model examples. See `docs/limitations.md` and `../../evidence_templates/android_evidence_commands.md` for required real-device evidence.

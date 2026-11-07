@@ -1,0 +1,8 @@
+name,sample_seconds,upload,encrypted,estimated_mAh,reason
+charging_wifi,10,BATCH_UPLOAD_NOW,True,0.16,Charging and Wi-Fi provide a suitable sync window.
+high_battery_lte_moving,15,BATCH_UPLOAD_WHEN_AVAILABLE,True,0.18,Moving vehicle needs higher sampling frequency.
+low_battery_stationary,120,QUEUE_UNTIL_WIFI_OR_CHARGING,True,0.07,Low battery and stationary motion.
+battery_saver,180,QUEUE_UNTIL_WIFI_OR_CHARGING,True,0.06,Critical battery saver policy.
+offline_six_hours,30,QUEUE_OFFLINE,True,0.08,No connectivity; retain encrypted records.
+device_hot,90,DEFER_UNTIL_COOL_OR_WIFI,True,0.11,Thermal protection reduces workload.
+emergency_alert,5,IMMEDIATE_HIGH_PRIORITY,True,0.42,Emergency priority overrides routine battery deferral.
