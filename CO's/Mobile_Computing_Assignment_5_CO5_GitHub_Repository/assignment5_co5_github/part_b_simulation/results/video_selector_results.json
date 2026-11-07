@@ -1,0 +1,34 @@
+[
+  {
+    "device": "Low-end",
+    "resolution": "480p",
+    "bitrate_mbps": 0.8,
+    "upload_seconds_est": 10.0,
+    "energy_units_est": 1.5,
+    "battery_fraction_est": 0.015
+  },
+  {
+    "device": "Mid-range",
+    "resolution": "720p",
+    "bitrate_mbps": 2.0,
+    "upload_seconds_est": 6.0,
+    "energy_units_est": 2.58,
+    "battery_fraction_est": 0.026
+  },
+  {
+    "device": "Flagship",
+    "resolution": "1080p",
+    "bitrate_mbps": 5.0,
+    "upload_seconds_est": 3.75,
+    "energy_units_est": 4.91,
+    "battery_fraction_est": 0.049
+  },
+  {
+    "device": "Weak-network",
+    "resolution": "480p",
+    "bitrate_mbps": 0.8,
+    "upload_seconds_est": 34.29,
+    "energy_units_est": 2.23,
+    "battery_fraction_est": 0.022
+  }
+]

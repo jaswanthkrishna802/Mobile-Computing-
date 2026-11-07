@@ -1,0 +1,82 @@
+[
+  {
+    "case": "small-balanced",
+    "items": 5,
+    "battery": 70,
+    "exact": {
+      "quality": "LOW",
+      "cache": 1,
+      "prefetch": 0,
+      "cost": 15.938
+    },
+    "exact_evaluated": 27,
+    "adaptive": {
+      "quality": "MEDIUM",
+      "cache": 2,
+      "prefetch": 1,
+      "cost": 19.025,
+      "changes": 0,
+      "estimated_frame_ms": 5.5
+    }
+  },
+  {
+    "case": "medium-low-battery",
+    "items": 20,
+    "battery": 15,
+    "exact": {
+      "quality": "LOW",
+      "cache": 1,
+      "prefetch": 0,
+      "cost": 85.0
+    },
+    "exact_evaluated": 27,
+    "adaptive": {
+      "quality": "MEDIUM",
+      "cache": 1,
+      "prefetch": 0,
+      "cost": 104.0,
+      "changes": 2,
+      "estimated_frame_ms": 5.5
+    }
+  },
+  {
+    "case": "large-feed",
+    "items": 100,
+    "battery": 65,
+    "exact": {
+      "quality": "LOW",
+      "cache": 1,
+      "prefetch": 0,
+      "cost": 318.75
+    },
+    "exact_evaluated": 27,
+    "adaptive": {
+      "quality": "MEDIUM",
+      "cache": 2,
+      "prefetch": 1,
+      "cost": 380.5,
+      "changes": 0,
+      "estimated_frame_ms": 5.5
+    }
+  },
+  {
+    "case": "counterexample-quality",
+    "items": 12,
+    "battery": 70,
+    "exact": {
+      "quality": "LOW",
+      "cache": 1,
+      "prefetch": 0,
+      "cost": 38.25
+    },
+    "exact_evaluated": 27,
+    "adaptive": {
+      "quality": "MEDIUM",
+      "cache": 2,
+      "prefetch": 1,
+      "cost": 45.66,
+      "changes": 0,
+      "estimated_frame_ms": 5.5
+    }
+  }
+]

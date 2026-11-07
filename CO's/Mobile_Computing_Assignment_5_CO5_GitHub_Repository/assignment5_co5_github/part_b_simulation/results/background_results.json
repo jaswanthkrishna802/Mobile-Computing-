@@ -1,0 +1,134 @@
+{
+  "Workload A": {
+    "FIFO": {
+      "strategy": "FIFO",
+      "enqueued": 5,
+      "deferred": 0,
+      "cancelled": 0,
+      "rejected": 0,
+      "successful": 5,
+      "max_concurrent_workers": 1,
+      "decision_log": [
+        {
+          "work_id": "E1",
+          "decision": "EXECUTE_SUCCESS"
+        },
+        {
+          "work_id": "E2",
+          "decision": "EXECUTE_SUCCESS"
+        },
+        {
+          "work_id": "E3",
+          "decision": "EXECUTE_SUCCESS"
+        },
+        {
+          "work_id": "E4",
+          "decision": "EXECUTE_SUCCESS"
+        },
+        {
+          "work_id": "E5",
+          "decision": "EXECUTE_SUCCESS"
+        }
+      ],
+      "residual_backlog": 0
+    },
+    "PRIORITY": {
+      "strategy": "PRIORITY",
+      "enqueued": 5,
+      "deferred": 0,
+      "cancelled": 0,
+      "rejected": 0,
+      "successful": 5,
+      "max_concurrent_workers": 1,
+      "decision_log": [
+        {
+          "work_id": "E3",
+          "decision": "EXECUTE_SUCCESS"
+        },
+        {
+          "work_id": "E2",
+          "decision": "EXECUTE_SUCCESS"
+        },
+        {
+          "work_id": "E1",
+          "decision": "EXECUTE_SUCCESS"
+        },
+        {
+          "work_id": "E4",
+          "decision": "EXECUTE_SUCCESS"
+        },
+        {
+          "work_id": "E5",
+          "decision": "EXECUTE_SUCCESS"
+        }
+      ],
+      "residual_backlog": 0
+    }
+  },
+  "Workload B": {
+    "FIFO": {
+      "strategy": "FIFO",
+      "enqueued": 5,
+      "deferred": 3,
+      "cancelled": 0,
+      "rejected": 1,
+      "successful": 1,
+      "max_concurrent_workers": 1,
+      "decision_log": [
+        {
+          "work_id": "D1",
+          "decision": "REJECT_UNENCRYPTED"
+        },
+        {
+          "work_id": "D2",
+          "decision": "DEFER_LOW_BATTERY"
+        },
+        {
+          "work_id": "D3",
+          "decision": "DEFER_LOW_BATTERY"
+        },
+        {
+          "work_id": "D4",
+          "decision": "DEFER_LOW_BATTERY"
+        },
+        {
+          "work_id": "D5",
+          "decision": "EXECUTE_SUCCESS"
+        }
+      ],
+      "residual_backlog": 3
+    },
+    "PRIORITY": {
+      "strategy": "PRIORITY",
+      "enqueued": 5,
+      "deferred": 3,
+      "cancelled": 0,
+      "rejected": 1,
+      "successful": 1,
+      "max_concurrent_workers": 1,
+      "decision_log": [
+        {
+          "work_id": "D5",
+          "decision": "EXECUTE_SUCCESS"
+        },
+        {
+          "work_id": "D4",
+          "decision": "DEFER_LOW_BATTERY"
+        },
+        {
+          "work_id": "D2",
+          "decision": "DEFER_LOW_BATTERY"
+        },
+        {
+          "work_id": "D3",
+          "decision": "DEFER_LOW_BATTERY"
+        },
+        {
+          "work_id": "D1",
+          "decision": "REJECT_UNENCRYPTED"
+        }
+      ],
+      "residual_backlog": 3
+    }
+  }
+}
