@@ -1,0 +1,11 @@
+MOBILE IP WORKED EXAMPLE
+Mobile Node home address: 10.0.0.25
+Mobile Node has moved to a visited network.
+Obtained Care-of Address: 192.0.2.80
+MN -> HA: Registration Request
+HA: Binding updated: 10.0.0.25 -> 192.0.2.80
+HA -> MN: Registration Reply ACCEPTED
+CN -> HA: IP packet destined for 10.0.0.25
+HA: Encapsulate packet and tunnel to 192.0.2.80
+Tunnel endpoint: Decapsulate original packet
+MN: Original packet DELIVERED

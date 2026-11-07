@@ -1,0 +1,9 @@
+DSDV-STYLE ROUTE UPDATE WORKED EXAMPLE
+Initial route table at A:
+Destination D -> next hop B, hop count 2, sequence 16
+Event: link A-B fails.
+A receives a fresh route advertisement for D via C:
+Advertised hop count = 1; sequence number = 18
+Decision: accept the fresher sequence number.
+Updated route table: D -> next hop C, hop count 2, sequence 18
+Note: this is a teaching example of DSDV sequence-number logic, not a full DSDV implementation.

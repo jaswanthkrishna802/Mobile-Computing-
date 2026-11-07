@@ -1,0 +1,66 @@
+Q1 wireless mobility demonstration
+{'time_step': 0, 'AP1_signal_dBm': -48, 'AP2_signal_dBm': -82, 'active_access_point': 'AP1', 'event': 'CONNECTED'}
+{'time_step': 1, 'AP1_signal_dBm': -55, 'AP2_signal_dBm': -76, 'active_access_point': 'AP1', 'event': 'CONNECTED'}
+{'time_step': 2, 'AP1_signal_dBm': -63, 'AP2_signal_dBm': -68, 'active_access_point': 'AP1', 'event': 'CONNECTED'}
+{'time_step': 3, 'AP1_signal_dBm': -71, 'AP2_signal_dBm': -59, 'active_access_point': 'AP2', 'event': 'HANDOFF_AP1_TO_AP2'}
+{'time_step': 4, 'AP1_signal_dBm': -79, 'AP2_signal_dBm': -51, 'active_access_point': 'AP2', 'event': 'CONNECTED'}
+Trace saved to results/q1_handoff_trace.csv
+MOBILE IP WORKED EXAMPLE
+Mobile Node home address: 10.0.0.25
+Mobile Node has moved to a visited network.
+Obtained Care-of Address: 192.0.2.80
+MN -> HA: Registration Request
+HA: Binding updated: 10.0.0.25 -> 192.0.2.80
+HA -> MN: Registration Reply ACCEPTED
+CN -> HA: IP packet destined for 10.0.0.25
+HA: Encapsulate packet and tunnel to 192.0.2.80
+Tunnel endpoint: Decapsulate original packet
+MN: Original packet DELIVERED
+Trace saved to results/q2_mobile_ip_trace.txt
+DSDV-STYLE ROUTE UPDATE WORKED EXAMPLE
+Initial route table at A:
+Destination D -> next hop B, hop count 2, sequence 16
+Event: link A-B fails.
+A receives a fresh route advertisement for D via C:
+Advertised hop count = 1; sequence number = 18
+Decision: accept the fresher sequence number.
+Updated route table: D -> next hop C, hop count 2, sequence 18
+Note: this is a teaching example of DSDV sequence-number logic, not a full DSDV implementation.
+Trace saved to results/q5_dsdv_trace.txt
+AODV-STYLE ROUTE DISCOVERY
+Source S needs a route to D.
+S broadcasts RREQ.
+S forwards RREQ to A.
+A forwards RREQ to B.
+B forwards RREQ to D.
+D generates RREP.
+RREP follows reverse path: B <- A <- S
+Installed forward route: S -> A -> B -> D
+Data packet forwarded successfully.
+Link failure example: A-B goes DOWN.
+Affected route is marked INVALID; source may initiate a new RREQ.
+Note: this is a simplified AODV-style discovery demonstration, not a complete RFC implementation.
+Trace saved to results/q6_aodv_trace.txt
+Q7 emergency network — illustrative model output
+{'scenario': 'Low mobility', 'sent': 100, 'received': 98, 'avg_delay_ms': 35, 'control_packets': 20, 'packet_delivery_ratio_percent': 98.0, 'routing_overhead_ratio': 0.204}
+{'scenario': 'Medium mobility', 'sent': 100, 'received': 93, 'avg_delay_ms': 58, 'control_packets': 34, 'packet_delivery_ratio_percent': 93.0, 'routing_overhead_ratio': 0.366}
+{'scenario': 'High mobility', 'sent': 100, 'received': 82, 'avg_delay_ms': 105, 'control_packets': 61, 'packet_delivery_ratio_percent': 82.0, 'routing_overhead_ratio': 0.744}
+{'scenario': 'Link failure and repair', 'sent': 100, 'received': 76, 'avg_delay_ms': 142, 'control_packets': 75, 'packet_delivery_ratio_percent': 76.0, 'routing_overhead_ratio': 0.987}
+Metrics:
+PDR (%) = packets received / packets sent * 100
+Routing overhead ratio = routing-control packets / data packets received
+Average delay is a model input for this demonstration.
+These values are illustrative, not real measured simulation results.
+CSV saved to results/q7_performance.csv
+
+===== Running q1_wireless_mobility.py =====
+
+===== Running q2_mobile_ip.py =====
+
+===== Running q5_dsdv.py =====
+
+===== Running q6_aodv.py =====
+
+===== Running q7_emergency_network.py =====
+
+All demonstrations completed. See the results/ directory.

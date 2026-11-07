@@ -1,0 +1,13 @@
+AODV-STYLE ROUTE DISCOVERY
+Source S needs a route to D.
+S broadcasts RREQ.
+S forwards RREQ to A.
+A forwards RREQ to B.
+B forwards RREQ to D.
+D generates RREP.
+RREP follows reverse path: B <- A <- S
+Installed forward route: S -> A -> B -> D
+Data packet forwarded successfully.
+Link failure example: A-B goes DOWN.
+Affected route is marked INVALID; source may initiate a new RREQ.
+Note: this is a simplified AODV-style discovery demonstration, not a complete RFC implementation.
